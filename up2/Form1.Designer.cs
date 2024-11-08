@@ -30,9 +30,9 @@ namespace up2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,12 +44,12 @@ namespace up2
             this.deleteContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NameSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.NameSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,7 @@ namespace up2
             // 
             this.saveToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(218, 36);
             this.saveToolStripMenuItem.Text = "Сохранить";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveContacts);
             // 
@@ -90,7 +90,7 @@ namespace up2
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 36);
             this.exitToolStripMenuItem.Text = "Выйти";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitFromBook);
             // 
@@ -111,7 +111,7 @@ namespace up2
             // 
             this.viewAllContactsToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
             this.viewAllContactsToolStripMenuItem.Name = "viewAllContactsToolStripMenuItem";
-            this.viewAllContactsToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.viewAllContactsToolStripMenuItem.Size = new System.Drawing.Size(355, 36);
             this.viewAllContactsToolStripMenuItem.Text = "Вывод всех контактов";
             this.viewAllContactsToolStripMenuItem.Click += new System.EventHandler(this.ViewAllContacts);
             // 
@@ -119,7 +119,7 @@ namespace up2
             // 
             this.addContactToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.addContactToolStripMenuItem.Name = "addContactToolStripMenuItem";
-            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.addContactToolStripMenuItem.Size = new System.Drawing.Size(355, 36);
             this.addContactToolStripMenuItem.Text = "Добавить контакт";
             this.addContactToolStripMenuItem.Click += new System.EventHandler(this.AddContact);
             // 
@@ -127,15 +127,15 @@ namespace up2
             // 
             this.editContactToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
             this.editContactToolStripMenuItem.Name = "editContactToolStripMenuItem";
-            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
-            this.editContactToolStripMenuItem.Text = "Редоктировать контакт";
+            this.editContactToolStripMenuItem.Size = new System.Drawing.Size(355, 36);
+            this.editContactToolStripMenuItem.Text = "Редактировать контакт";
             this.editContactToolStripMenuItem.Click += new System.EventHandler(this.EditContact);
             // 
             // deleteContactToolStripMenuItem
             // 
             this.deleteContactToolStripMenuItem.BackColor = System.Drawing.Color.PeachPuff;
             this.deleteContactToolStripMenuItem.Name = "deleteContactToolStripMenuItem";
-            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.deleteContactToolStripMenuItem.Size = new System.Drawing.Size(355, 36);
             this.deleteContactToolStripMenuItem.Text = "Удалить контакт";
             this.deleteContactToolStripMenuItem.Click += new System.EventHandler(this.DeleteContact);
             // 
@@ -143,20 +143,20 @@ namespace up2
             // 
             this.searchContactToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
             this.searchContactToolStripMenuItem.Name = "searchContactToolStripMenuItem";
-            this.searchContactToolStripMenuItem.Size = new System.Drawing.Size(357, 36);
+            this.searchContactToolStripMenuItem.Size = new System.Drawing.Size(355, 36);
             this.searchContactToolStripMenuItem.Text = "Поиск контакта";
             this.searchContactToolStripMenuItem.Click += new System.EventHandler(this.SearchContact);
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameSurname,
@@ -169,6 +169,26 @@ namespace up2
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(901, 372);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // NameSurname
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameSurname.DefaultCellStyle = dataGridViewCellStyle2;
+            this.NameSurname.HeaderText = "Имя Фамилия";
+            this.NameSurname.MinimumWidth = 6;
+            this.NameSurname.Name = "NameSurname";
+            this.NameSurname.ReadOnly = true;
+            this.NameSurname.Width = 350;
+            // 
+            // PhoneNumber
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PhoneNumber.HeaderText = "Номер телефона";
+            this.PhoneNumber.MinimumWidth = 6;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Width = 350;
             // 
             // textBox1
             // 
@@ -205,26 +225,6 @@ namespace up2
             this.label2.Size = new System.Drawing.Size(285, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ввод номера телефона";
-            // 
-            // NameSurname
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameSurname.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NameSurname.HeaderText = "Имя Фамилия";
-            this.NameSurname.MinimumWidth = 6;
-            this.NameSurname.Name = "NameSurname";
-            this.NameSurname.ReadOnly = true;
-            this.NameSurname.Width = 350;
-            // 
-            // PhoneNumber
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PhoneNumber.DefaultCellStyle = dataGridViewCellStyle6;
-            this.PhoneNumber.HeaderText = "Номер телефона";
-            this.PhoneNumber.MinimumWidth = 6;
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 350;
             // 
             // Form1
             // 
